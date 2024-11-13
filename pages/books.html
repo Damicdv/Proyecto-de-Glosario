@@ -4,22 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/books.css">
-    <link rel="stylesheet" href="../componentes/nav__link.css   ">
+    <link rel="stylesheet" href="../componentes/nav__link.css">
     <title>Books</title>
 </head>
 <body>
     <header class="header">
-        <h1>Libroafoawo lfna</h1>
+        <h1>Books</h1>
         <ul class="navlist">
             <li class="list-item"><a href="/Proyecto-de-Glosario/home.html" class="nav__link btn6">Home</a></li>
             <li class="list-item"><a href="/Proyecto-de-Glosario/pages/books.html" class="nav__link btn6">Books</a></li>
             <li class="list-item"><a href="/Proyecto-de-Glosario/pages/terms.html" target="_blank" class="nav__link btn6">Terms</a></li>
         </ul>
     </header>
+    
     <div class="main">
-        <div class="book-item item-html">HTML</div>
-        <div class="book-item item-css">CSS</div>
-        <div class="book-item item-java">Java Script</div>
+        <!-- Book Item HTML -->
+        <div class="book-item item-html" onclick="openModal('html')">
+            <h3>HTML</h3>
+        </div>
+
+        <!-- Book Item CSS -->
+        <div class="book-item item-css" onclick="openModal('css')">
+            <h3>CSS</h3>
+        </div>
+
+        <!-- Book Item JavaScript -->
+        <div class="book-item item-java" onclick="openModal('java')">
+            <h3>JavaScript</h3>
+        </div>
     </div>
+
+    <!-- Modal Structure -->
+    <div id="modal-background" class="modal-background" onclick="closeModal()">
+        <div class="modal__Window html--modal">
+            <span class="modal-close" onclick="closeModal(event)">&#10005;</span> <!-- Cruz de cierre -->
+            <div class="modal-content">
+                <h3>HTML</h3>
+                <p><strong>HTML</strong> - Lenguaje de marcado utilizado para crear páginas web y estructurar contenido en la web.</p>
+            
+                <ul>
+                    <li><strong>Tag</strong>: Elemento básico de HTML que define un elemento de la página web, como un título, texto, imagen o enlace.</li>
+                    <li><strong>Element</strong>: Componente básico de HTML que puede ser una etiqueta de apertura, una etiqueta de cierre o un contenido.</li>
+                    <li><strong>Attribute</strong>: Información adicional que se puede agregar a una etiqueta HTML para proporcionar información sobre el elemento.</li>
+                    <li><strong>Block Element</strong>: Elemento HTML que crea una nueva línea en la página y puede contener otros elementos.</li>
+                    <li><strong>Inline Element</strong>: Elemento HTML que se inserta dentro de otra etiqueta y no crea una nueva línea en la página.</li>
+                    <li><strong>Head</strong>: Sección de una página HTML que contiene información sobre el documento, como el título y las metas.</li>
+                    <li><strong>Body</strong>: Sección de una página HTML que contiene el contenido visible de la página.</li>
+                    <li><strong>Hyperlink</strong>: Elemento HTML que permite a los usuarios navegar entre páginas web.</li>
+                    <li><strong>Image</strong>: Elemento HTML que muestra una imagen en la página web.</li>
+                    <li><strong>List</strong>: Elemento HTML que permite mostrar una lista de elementos, como un menú de navegación o una lista de productos.</li>
+                    <li><strong>Form</strong>: Elemento HTML que permite recolectar información de entrada del usuario, como nombres, direcciones o contraseñas.</li>
+                    <li><strong>Input</strong>: Elemento HTML que permite al usuario ingresar información, como texto, números o seleccionar opciones.</li>
+                    <li><strong>Button</strong>: Elemento HTML que crea un botón en la página que puede ser utilizado para enviar formularios o ejecutar funciones.</li>
+                    <li><strong>Semantic HTML</strong>: Práctica de usar elementos HTML que proporcionan un significado claro, mejorando la accesibilidad y la indexación.</li>
+                    <li><strong>Header</strong>: Elemento HTML que contiene información de presentación y navegación en la parte superior de la página.</li>
+                    <li><strong>Footer</strong>: Elemento HTML que contiene información adicional en la parte inferior de la página.</li>
+                    <li><strong>Sidebar</strong>: Elemento HTML que contiene contenido secundario o relacionado en un área lateral de la página.</li>
+                    <li><strong>Section</strong>: Elemento HTML que define una sección o área de contenido en la página.</li>
+                    <li><strong>Article</strong>: Elemento HTML que representa un artículo o entrada independiente en una página.</li>
+                    <li><strong>Nav</strong>: Elemento HTML que crea un menú de navegación en la página.</li>
+                    <li><strong>Div</strong>: Elemento HTML genérico que permite agrupar y organizar otros elementos en la página.</li>
+                    <li><strong>Span</strong>: Elemento HTML genérico que permite agregar estilo o comportamiento a un conjunto de caracteres.</li>
+                    <li><strong>ID</strong>: Atributo HTML que proporciona un nombre único para un elemento, utilizado para manipularlo con JavaScript o CSS.</li>
+                    <li><strong>Class</strong>: Atributo HTML que permite asignar un nombre a un grupo de elementos, utilizado para seleccionarlos con JavaScript o CSS.</li>
+                    <li><strong>CSS</strong>: Lenguaje de hojas de estilo en cascada utilizado para definir la apariencia y el diseño de una página web.</li>
+                    <li><strong>JavaScript</strong>: Lenguaje de programación utilizado para agregar interacción y dinamismo a las páginas web.</li>
+                    <li><strong>Browser</strong>: Software que permite a los usuarios visualizar y interactuar con páginas web.</li>
+                    <li><strong>Responsive Design</strong>: Práctica de crear páginas web que se ajustan automáticamente al tamaño y la orientación de la pantalla del dispositivo.</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="modal__Window css--modal">
+            <span class="modal-close" onclick="closeModal(event)">&#10005;</span> <!-- Cruz de cierre -->
+            <div class="modal-content">
+                <h3>CSS</h3>
+                <p><strong>CSS</strong> (Cascading Style Sheets) - Lenguaje utilizado para definir la apariencia y el diseño de una página web.</p>
+                
+                <ul>
+                    <li><strong>Selector</strong>: Elemento CSS que selecciona los elementos HTML para aplicar estilos.</li>
+                    <li><strong>Property</strong>: Estilo asignado a un elemento, como tamaño o color.</li>
+                    <li><strong>Value</strong>: Valor de una propiedad, como tamaño en píxeles o color en hexadecimal.</li>
+                    <li><strong>Rule</strong>: Combinación de un selector, propiedad y valor.</li>
+                    <li><strong>Declaration</strong>: Propiedad y valor dentro de una regla CSS.</li>
+                    <li><strong>Cascade</strong>: El proceso por el cual las reglas se aplican en orden de especificidad.</li>
+                    <li><strong>Priority</strong>: Establece qué reglas se aplican en caso de conflicto, priorizando las más específicas.</li>
+                    <li><strong>Box Model</strong>: Concepto que describe cómo se componen los elementos HTML (margen, borde, contenido).</li>
+                    <li><strong>Margin</strong>: Espacio entre el elemento y el contenido adyacente.</li>
+                    <li><strong>Padding</strong>: Espacio entre el contenido de un elemento y su borde.</li>
+                    <li><strong>Border</strong>: Límite alrededor del contenido de un elemento.</li>
+                    <li><strong>Background</strong>: Propiedad que define el color o imagen de fondo de un elemento.</li>
+                    <li><strong>Media Query</strong>: Función que aplica estilos según el tamaño y tipo de dispositivo.</li>
+                    <li><strong>Display</strong>: Propiedad que controla cómo se muestra un elemento (en bloque o en línea).</li>
+                    <li><strong>Position</strong>: Propiedad para posicionar elementos (estático, fijo, flotante).</li>
+                    <li><strong>Float</strong>: Posiciona elementos a la izquierda o derecha de su contenedor.</li>
+                    <li><strong>Clear</strong>: Controla el comportamiento de los elementos flotantes.</li>
+                    <li><strong>Z-index</strong>: Propiedad que define la profundidad de un elemento en el eje Z.</li>
+                    <li><strong>Hover</strong>: Pseudoclase que aplica estilos cuando el cursor se coloca sobre un elemento.</li>
+                    <li><strong>Focus</strong>: Pseudoclase que aplica estilos cuando un elemento recibe el foco (por ejemplo, un campo de formulario).</li>
+                    <li><strong>Transition</strong>: Define el cambio de un elemento de un estado a otro.</li>
+                    <li><strong>Animation</strong>: Crea animaciones para mover o cambiar propiedades de un elemento.</li>
+                    <li><strong>Keyframes</strong>: Define los estados intermedios de una animación.</li>
+                    <li><strong>Flexbox</strong>: Modelo para crear diseños flexibles (filas y columnas adaptativas).</li>
+                    <li><strong>Grid</strong>: Modelo para crear estructuras de dos dimensiones (filas y columnas) adaptativas.</li>
+                    <li><strong>CSS Framework</strong>: Conjunto de reglas predefinidas para crear sitios web rápidamente, como Bootstrap.</li>
+                    <li><strong>CSS Preprocessor</strong>: Lenguajes como Sass o Less para extender CSS y personalizarlo.</li>
+                    <li><strong>CSS Grid Layout</strong>: Modelo para crear layouts flexibles y adaptativos en dos dimensiones.</li>
+                </ul>
+            </div>            
+        </div>
+        <div class="modal__Window java--modal">
+            <span class="modal-close" onclick="closeModal(event)">&#10005;</span> <!-- Cruz de cierre -->
+            <div class="modal-content">
+                <h3>JavaScript</h3>
+                <p><strong>JavaScript</strong> - Lenguaje de programación de alto nivel utilizado para agregar interacción y dinamismo a las páginas web.</p>
+                
+                <ul>
+                    <li><strong>Variable</strong>: Espacio en memoria utilizado para almacenar valores y asignar nombres a esos valores.</li>
+                    <li><strong>Function</strong>: Bloque de código reutilizable que puede ser llamado con diferentes parámetros y devuelve un valor.</li>
+                    <li><strong>Object</strong>: Conjunto de propiedades y métodos que representan una entidad o entidad abstracta.</li>
+                    <li><strong>Array</strong>: Colección ordenada y mutable de elementos, similar a una lista en otros lenguajes.</li>
+                    <li><strong>String</strong>: Secuencia de caracteres entre comillas dobles o simples.</li>
+                    <li><strong>Number</strong>: Tipo de dato numérico que representa números enteros o decimales.</li>
+                    <li><strong>Boolean</strong>: Tipo de dato que representa valores verdaderos o falsos.</li>
+                    <li><strong>Conditional Statement</strong>: Estructura de control que ejecuta código según una condición booleana.</li>
+                    <li><strong>Loop</strong>: Estructura de control que repite la ejecución de código mientras se cumpla una condición.</li>
+                    <li><strong>If Statement</strong>: Instrucción condicional que ejecuta un bloque de código si se cumple una condición.</li>
+                    <li><strong>Else Statement</strong>: Cláusula que se ejecuta si la condición del "If" no se cumple.</li>
+                    <li><strong>Elif Statement</strong>: Cláusula que se ejecuta si la condición "If" y "Else" no se cumplen.</li>
+                    <li><strong>For Loop</strong>: Bucle que itera sobre una secuencia de elementos y ejecuta código para cada uno.</li>
+                    <li><strong>While Loop</strong>: Bucle que ejecuta un bloque de código mientras se cumpla una condición booleana.</li>
+                    <li><strong>Event</strong>: Ocurrencia en un objeto que desencadena una acción, como un click o un cambio en un campo.</li>
+                    <li><strong>Event Listener</strong>: Función que asigna una acción a un evento específico.</li>
+                    <li><strong>Document Ready</strong>: Evento que ocurre cuando el documento HTML ha sido completamente cargado.</li>
+                    <li><strong>Window Object</strong>: Objeto global que representa la ventana del navegador y sus propiedades y métodos.</li>
+                    <li><strong>Local Storage</strong>: Tecnología que permite almacenar datos locales en el navegador para ser recuperados después.</li>
+                    <li><strong>Session Storage</strong>: Almacena datos de sesión en el navegador mientras dure la sesión.</li>
+                    <li><strong>Cookies</strong>: Pequeños archivos de texto que se almacenan en el navegador y permiten rastrear actividad o almacenar datos.</li>
+                    <li><strong>AJAX</strong>: Tecnología que permite enviar solicitudes HTTP sin recargar la página, mejorando la interacción con el servidor.</li>
+                    <li><strong>JSON</strong>: Formato ligero de intercambio de datos utilizado para la comunicación entre cliente y servidor.</li>
+                    <li><strong>Callback Function</strong>: Función pasada como argumento que se ejecuta automáticamente cuando se completa la tarea.</li>
+                    <li><strong>Promise</strong>: Objeto que representa una operación que puede tardar en completarse y permite manejar éxito o error.</li>
+                    <li><strong>Async/await</strong>: Patrón que simplifica la escritura de código asincrónico usando funciones async y await.</li>
+                    <li><strong>Closure</strong>: Función que puede acceder a variables externas, incluso después de que esas variables hayan salido de su ámbito.</li>
+                </ul>
+            </div>            
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>
